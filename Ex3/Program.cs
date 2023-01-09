@@ -5,44 +5,39 @@ class Program
     static void Main(string[] args)
     {
         Exercise1();
+        Console.WriteLine();
         Exercise2();
+        Console.WriteLine();
         Exercise3();
+        Console.WriteLine();
         Exercise4();
 
     }
     public static void Exercise1()
     {
+        Console.WriteLine("Exercise 1");
         Dice roll = new Dice();
 
         Console.Write("Enter the number of sides: ");
         int side = int.Parse(Console.ReadLine());
         roll.Side = side;
         int trueNumber = roll.Roll();
-        while (true)
+        Console.WriteLine("Please guess a number");
+        int guessNumber = int.Parse(Console.ReadLine());
+        if (guessNumber == trueNumber)
         {
-            Console.WriteLine("Please guess a number");
-            int guessNumber = int.Parse(Console.ReadLine());
-            if (guessNumber == trueNumber)
-            {
-                Console.WriteLine("You've guess the right number!");
-                break;
-            }
-            else
-            {
-                Console.WriteLine("You've guess the wrong number!");
-                Console.WriteLine("Press n to end the program or you can try again!");
-                char character = char.Parse(Console.ReadLine());
-                if (character == 'n')
-                {
-                    Console.WriteLine("Goodbye!");
-                    break;
-                }
-            }
+            Console.WriteLine("You've guess the right number!");
+        }
+        else
+        {
+            Console.WriteLine("You've guess the wrong number!");
+            Console.WriteLine($"The true number is {trueNumber}");
         }
     }
 
     public static void Exercise2()
     {
+        Console.WriteLine("Exercise 2");
         Person person = new Person();
         person.Name = "Test";
         person.Age = 1;
@@ -57,6 +52,7 @@ class Program
 
     public static void Exercise3()
     {
+        Console.WriteLine("Exercise 3");
         int numberofSongs = int.Parse(Console.ReadLine());
         Song[] songs = new Song[numberofSongs];
         for (int i = 0; i < numberofSongs; i++)
@@ -89,6 +85,7 @@ class Program
 
     public static void Exercise4()
     {
+        Console.WriteLine("Exercise 4");
         Fraction fraction1 = new Fraction(int.Parse(Console.ReadLine()),
             int.Parse(Console.ReadLine()));
         Fraction fraction2 = new Fraction(int.Parse(Console.ReadLine()),
