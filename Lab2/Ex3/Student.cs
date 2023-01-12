@@ -7,15 +7,11 @@
         public float Grade { get; set; }
 
         public Student() { }
-
-        public void Create()
+        public Student(string name, int age, float grade)
         {
-            Con
-        }
-
-        public void Show()
-        {
-            Console.WriteLine("The student name: " + Name);
+            Name = name;
+            Age = age;
+            Grade = grade;
         }
     }
 }
