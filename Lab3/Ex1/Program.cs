@@ -3,10 +3,12 @@ internal class Program
 {
     public static void Main(string[] args)
     {
+        Console.WriteLine("Please enter the number of player you want to add.");
         var lines = int.Parse(Console.ReadLine());
         var people = new List<Person>();
         for (int i = 0; i < lines; i++)
         {
+            Console.WriteLine("Please enter the name, age and salary of the person in one line.");
             var cmdArgs = Console.ReadLine().Split();
             string firstName = cmdArgs[0];
             string lastName = cmdArgs[1];
