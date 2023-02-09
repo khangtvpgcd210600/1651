@@ -50,9 +50,11 @@ class Program
     public static void Exercise5()
     {
         Coffee coffee = new Coffee("Highland", 3);
-        Console.WriteLine($"The {coffee.GetType().Name} name {coffee.Name} has the caffeine of {coffee.Caffeine}");
+        Console.WriteLine($"The {coffee.GetType().Name} name {coffee.Name}" +
+            $" has the caffeine of {coffee.Caffeine}");
         Cake cake = new Cake("ABC");
-        Console.WriteLine($"The {cake.GetType().Name} name {cake.Name} have {cake.Grams} grams, {cake.Calories} calories and have a price of {cake.Price}.");
+        Console.WriteLine($"The {cake.GetType().Name} name {cake.Name} have {cake.Grams} grams," +
+            $" {cake.Calories} calories and have a price of {cake.Price}.");
     }
 
     public static void Exercise6()
